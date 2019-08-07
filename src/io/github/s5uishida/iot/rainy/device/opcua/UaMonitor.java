@@ -294,7 +294,7 @@ public class UaMonitor {
 				}
 				NodeId nodeId = referenceDesc.getNodeId().local(client.getNamespaceTable()).get();
 				if (referenceDesc.getNodeClass().equals(NodeClass.Variable)) {
-					LOG.debug(logPrefix + indent + "added {}", nodeId.toString());
+					LOG.trace(logPrefix + indent + "added {}", nodeId.toString());
 					nodeIds.add(nodeId);
 					continue;
 				}
@@ -313,8 +313,16 @@ public class UaMonitor {
 			throw new IllegalStateException(logPrefix + "client not ready yet.");
 		}
 		for (NodeIdDepth nodeIdDepth : uaServerConfig.getNodeIdDepths()) {
-			nodeIds.addAll(browseNode(nodeIdDepth.nodeId, 0, nodeIdDepth.depth));
-			nodeIds.add(0, nodeIdDepth.nodeId);
+			for (NodeId nodeId : browseNode(nodeIdDepth.nodeId, 0, nodeIdDepth.depth)) {
+				if (!nodeIds.contains(nodeId)) {
+					LOG.debug(logPrefix + "added {}", nodeId.toString());
+					nodeIds.add(nodeId);
+				}
+			}
+			if (!nodeIds.contains(nodeIdDepth.nodeId)) {
+				LOG.debug(logPrefix + "added {}", nodeIdDepth.nodeId.toString());
+				nodeIds.add(nodeIdDepth.nodeId);
+			}
 		}
 	}
 
