@@ -61,7 +61,7 @@ public final class KeyStoreLoader {
 			return this;
 		} catch (Exception e) {
 			LOG.warn("caught - {}", e.toString());
-			LOG.info("failed to load {}.", certificate);
+			LOG.warn("failed to load {}.", certificate);
 			throw e;
 		}
 	}
