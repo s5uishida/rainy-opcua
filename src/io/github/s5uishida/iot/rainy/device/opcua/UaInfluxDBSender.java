@@ -43,6 +43,7 @@ public class UaInfluxDBSender extends AbstractInfluxDBSender implements IDataSen
 				data.clientID = uaData.clientID;
 				data.samplingDate = (String)nodeDataMap.get("sourceTime");
 				data.samplingTimeMillis = (Long)nodeDataMap.get("sourceTimeMillis");
+				data.samplingTimeNanos = (Long)nodeDataMap.get("sourceTimeNanos");
 
 				BatchPoints batchPoints = BatchPoints.database(dbName).tag("async", "true").retentionPolicy(retentionPolicy).build();
 				Builder builder = setCommonFields("opcua", data);

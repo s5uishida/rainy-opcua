@@ -267,6 +267,7 @@ public class OPCUA implements IDevice {
 						uaData.deviceID = getDeviceID(notificationData.uaServerConfig);
 						uaData.samplingDate = dateString;
 						uaData.samplingTimeMillis = date.getTime();
+						uaData.samplingTimeNanos = (notificationData.publishTime.getUtcTime() % 10000) * 100;
 
 						uaData.opcua = new HashMap<String, List<Map<String, Object>>>();
 
@@ -286,8 +287,10 @@ public class OPCUA implements IDevice {
 							nodeDataMap.put("value", getJavaData(nodeData.value));
 							nodeDataMap.put("sourceTime", sdf.format(nodeData.dataValue.getSourceTime().getJavaDate()));
 							nodeDataMap.put("sourceTimeMillis", nodeData.dataValue.getSourceTime().getJavaTime());
+							nodeDataMap.put("sourceTimeNanos", (nodeData.dataValue.getSourceTime().getUtcTime() % 10000) * 100);
 							nodeDataMap.put("serverTime", sdf.format(nodeData.dataValue.getServerTime().getJavaDate()));
 							nodeDataMap.put("serverTimeMillis", nodeData.dataValue.getServerTime().getJavaTime());
+							nodeDataMap.put("serverTimeNanos", (nodeData.dataValue.getServerTime().getUtcTime() % 10000) * 100);
 
 							list.add(nodeDataMap);
 
