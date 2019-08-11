@@ -1,10 +1,12 @@
 package io.github.s5uishida.iot.rainy.device.opcua;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.influxdb.dto.BatchPoints;
 import org.influxdb.dto.Point.Builder;
@@ -18,6 +20,8 @@ import io.github.s5uishida.iot.rainy.sender.influxdb.AbstractInfluxDBSender;
  *
  */
 public class UaInfluxDBSender extends AbstractInfluxDBSender implements IDataSender {
+	private static final Set<String> isFirstSet = new HashSet<String>();
+
 	private String formatKey(String key) {
 		return key.replaceAll("[:;,\\.\\-/\\(\\)\\[\\]]", "_");
 	}
@@ -30,6 +34,11 @@ public class UaInfluxDBSender extends AbstractInfluxDBSender implements IDataSen
 
 		UaData uaData = (UaData)object;
 		String dbName = formatDBName(uaData.deviceID);
+
+		if (!isFirstSet.contains(dbName)) {
+			isFirstSet.add(dbName);
+			return;
+		}
 
 		Iterator<Entry<String, List<Map<String, Object>>>> it = uaData.opcua.entrySet().iterator();
 		while (it.hasNext()) {
