@@ -10,7 +10,7 @@ import io.github.s5uishida.iot.rainy.util.ConfigParams;
 public class UaConfig extends AbstractConfig {
 	public static final String NAME							= "rainy opc-ua client";
 	public static final String URI							= "urn:eclipse:milo:rainy:client";
-	public static final String VERSION						= "0.1.3";
+	public static final String VERSION						= "0.1.4";
 	public static final String SERVER_DIR					= "opcua";
 	public static final String INFLUXDB_KEY					= "influxDB";
 	public static final String MQTT_KEY						= "mqtt";
