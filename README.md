@@ -48,7 +48,7 @@ If git is not included, please install it.
 - [Moshi 1.7.0](https://github.com/s5uishida/moshi-osgi)
 - [MessagePack for Java 0.8.17](https://github.com/s5uishida/msgpack-core-osgi)
 - [Eclipse Paho Client Mqttv3 1.2.1](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.1)
-- [rainy 0.1.11](https://github.com/s5uishida/rainy)
+- [rainy 0.1.13](https://github.com/s5uishida/rainy)
 
 I would like to thank the authors of these very useful codes, and all the contributors.
 
