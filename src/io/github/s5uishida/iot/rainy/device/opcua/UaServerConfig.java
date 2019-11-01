@@ -52,6 +52,7 @@ public class UaServerConfig extends AbstractConfig {
 	private final String logPrefix;
 
 	private UaMonitor monitor;
+	private boolean enableInfluxDBSender = false;
 
 	static {
 		FilenameFilter filter = new FilenameFilter() {
@@ -250,6 +251,14 @@ public class UaServerConfig extends AbstractConfig {
 
 	public UaMonitor getUaMonitor() {
 		return monitor;
+	}
+
+	public void setEnableInfluxDBSender(boolean enableInfluxDBSender) {
+		this.enableInfluxDBSender = enableInfluxDBSender;
+	}
+
+	public boolean getEnableInfluxDBSender() {
+		return enableInfluxDBSender;
 	}
 
 	@Override

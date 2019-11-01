@@ -301,6 +301,12 @@ public class OPCUA implements IDevice {
 						for (IDataSender sender : senders) {
 							try {
 								if (sender.isConnected()) {
+									if (sender instanceof UaInfluxDBSender) {
+										if (!notificationData.uaServerConfig.getEnableInfluxDBSender()) {
+											notificationData.uaServerConfig.setEnableInfluxDBSender(true);
+											continue;
+										}
+									}
 									sender.send(uaData);
 								}
 							} catch (IOException e) {
@@ -364,6 +370,7 @@ public class OPCUA implements IDevice {
 						endpointUrl = uaServerConfig.getUaMonitor().getUaClient().getStackClient().getConfig().getEndpoint().getEndpointUrl();
 						LOG.info("re-establishing the connection to {}...", endpointUrl);
 
+						uaServerConfig.setEnableInfluxDBSender(false);
 						monitor.setMonitoredItems();
 
 						LOG.info("re-established the connection to {}.", endpointUrl);
