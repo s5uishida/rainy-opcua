@@ -32,12 +32,12 @@ If git is not included, please install it.
 - [JavaBeans Activation Framework (JAF) 1.2.0](https://mvnrepository.com/artifact/com.sun.activation/javax.activation/1.2.0)
 - [strict-machine-osgi 0.1](https://github.com/s5uishida/strict-machine-osgi)
 - [netty-channel-fsm-osgi 0.3](https://github.com/s5uishida/netty-channel-fsm-osgi)
-- [bsd-parser-core 0.3.3](https://mvnrepository.com/artifact/org.eclipse.milo/bsd-parser-core/0.3.3)
-- [bsd-parser-gson 0.3.3](https://mvnrepository.com/artifact/org.eclipse.milo/bsd-parser-gson/0.3.3)
-- [stack-core 0.3.3](https://mvnrepository.com/artifact/org.eclipse.milo/stack-core/0.3.3)
-- [stack-client 0.3.3](https://mvnrepository.com/artifact/org.eclipse.milo/stack-client/0.3.3)
-- [sdk-core 0.3.3](https://mvnrepository.com/artifact/org.eclipse.milo/sdk-core/0.3.3)
-- [sdk-client 0.3.3](https://mvnrepository.com/artifact/org.eclipse.milo/sdk-client/0.3.3)
+- [bsd-parser-core 0.3.4](https://mvnrepository.com/artifact/org.eclipse.milo/bsd-parser-core/0.3.4)
+- [bsd-parser-gson 0.3.4](https://mvnrepository.com/artifact/org.eclipse.milo/bsd-parser-gson/0.3.4)
+- [stack-core 0.3.4](https://mvnrepository.com/artifact/org.eclipse.milo/stack-core/0.3.4)
+- [stack-client 0.3.4](https://mvnrepository.com/artifact/org.eclipse.milo/stack-client/0.3.4)
+- [sdk-core 0.3.4](https://mvnrepository.com/artifact/org.eclipse.milo/sdk-core/0.3.4)
+- [sdk-client 0.3.4](https://mvnrepository.com/artifact/org.eclipse.milo/sdk-client/0.3.4)
 - [Gson 2.8.5](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.5)
 - [Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs 1.62](https://www.bouncycastle.org/download/bcpkix-jdk15on-162.jar)
 - [Bouncy Castle Provider 1.62](https://www.bouncycastle.org/download/bcprov-jdk15on-162.jar)
@@ -48,7 +48,7 @@ If git is not included, please install it.
 - [Moshi 1.7.0](https://github.com/s5uishida/moshi-osgi)
 - [MessagePack for Java 0.8.17](https://github.com/s5uishida/msgpack-core-osgi)
 - [Eclipse Paho Client Mqttv3 1.2.1](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.1)
-- [rainy 0.1.17](https://github.com/s5uishida/rainy)
+- [rainy 0.1.18](https://github.com/s5uishida/rainy)
 
 I would like to thank the authors of these very useful codes, and all the contributors.
 
