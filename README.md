@@ -7,13 +7,11 @@ I have confirmed that it works in Raspberry Pi 3B  ([Raspbian Buster Lite OS](ht
 ## Install Raspbian Buster Lite OS (2019-07-10)
 The reason for using this version is that it is the latest as of July 2019.
 
-## Install jdk11 on Raspberry Pi 3B
-For example, [jdk11 apt-install](https://apt.bell-sw.com/) at [BELLSOFT](https://bell-sw.com/) is shown below.
+## Install jdk8 on Raspberry Pi 3B
+For example, the installation of OpenJDK 8 is shown below.
 ```
-# wget -q -O - https://download.bell-sw.com/pki/GPG-KEY-bellsoft | apt-key add -
-# echo "deb [arch=armhf] https://apt.bell-sw.com/ stable main" | tee /etc/apt/sources.list.d/bellsoft.list
 # apt-get update
-# apt-get install bellsoft-java11
+# apt-get install openjdk-8-jdk
 ```
 
 ## Install git
