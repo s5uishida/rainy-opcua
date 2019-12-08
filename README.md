@@ -45,6 +45,7 @@ If git is not included, please install it.
 - [Retrofit 2.5.0](https://mvnrepository.com/artifact/org.apache.servicemix.bundles/org.apache.servicemix.bundles.retrofit/2.5.0_2)
 - [Moshi 1.7.0](https://github.com/s5uishida/moshi-osgi)
 - [MessagePack for Java 0.8.17](https://github.com/s5uishida/msgpack-core-osgi)
+- [influxdb-java-osgi 2.15.0](https://github.com/s5uishida/influxdb-java-osgi)
 - [Eclipse Paho Client Mqttv3 1.2.1](https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.1)
 - [rainy 0.1.18](https://github.com/s5uishida/rainy)
 
